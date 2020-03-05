@@ -1,0 +1,64 @@
+i = 1
+filename = 'Administratie.txt'
+
+been = input("Have you been here before? ")
+
+if been == "yes":
+    number2 = input("What ride do you want to go to? Type 1 for carousel, 2 for rollercoaster or 3 for giant slide")
+    ride = int(number2)
+
+    if ride == 1:
+        print("Okay have fun on the carousel!")
+
+    if ride == 2:
+        print("Okay have fun on the rollercoaster")
+
+    if ride == 3:
+        print("Okay have fun on the giant slide")
+
+elif been == "no":
+    name = input("What's your name? ")
+    number = input("And how old are you? ")
+    age = int(number)
+
+    print("Hello, " + name + "!")
+
+    if age < 12:
+        print("You have to pay 5 Dollars")
+        age = str(number)
+        with open(filename, 'a') as file_object:
+            file_object.write("\n$5 " + name + " " + age + " Years Old")
+    elif age < 18:
+        print("You have to pay 10 Dollars")
+        age = str(number)
+        with open(filename, 'a') as file_object:
+            file_object.write("\n$10 " + name + " " + age + " Years Old")
+    elif age < 25:
+        print("12,50 for you")
+        age = str(number)
+        with open(filename, 'a') as file_object:
+            file_object.write("\n$12,50 " + name + " " + age + " Years Old")
+    elif age < 52:
+        print("That will be 15 Dollars!")
+        age = str(number)
+        with open(filename, 'a') as file_object:
+            file_object.write("\n$15 " + name + " " + age + " Years Old")
+    elif age < 72:
+        print("That will be 25 dollars")
+        age = str(number)
+        with open(filename, 'a') as file_object:
+            file_object.write("\n$25 " + name + " " + age + " Years Old BOOMER ALERT")
+        while i < 11:
+            print("Ok Boomer")
+            i += 1
+    else:
+        print("That would be 15 dollars malady")
+        age = str(number)
+        with open(filename, 'a') as file_object:
+            file_object.write("\n$15 " + name + " " + age + " Years Old")
+
+else:
+    print("Please put yes or no")
+
+
+
